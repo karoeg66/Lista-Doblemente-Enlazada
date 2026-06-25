@@ -5,7 +5,7 @@ public class ListaDoble {
     Nodo ultimo;
     int tamanio;
     public int eliminarInicio() {
-        if(cabeza == null){
+        if (cabeza == null) {
             System.out.println("La lista esta vacia...");
             return 0;
         }
@@ -14,11 +14,26 @@ public class ListaDoble {
         tamanio--;
         if (cabeza != null) {
             cabeza.anterior = null;
-        }
-        else{
+        } else {
             ultimo = null;
         }
         return valor;
     }
-
+    public int eliminarAlFinal(){
+        if(ultimo == null){
+            System.out.println("La lista esta vacia...");
+            return 0;
+        }
+        int valor = ultimo.valor;
+        if(cabeza == ultimo){
+            cabeza = null;
+            ultimo = null;
+        }else{
+            ultimo = ultimo.anterior;
+            ultimo.siguiente = null;
+        }
+        tamanio--;
+        return valor;
     }
+
+}
