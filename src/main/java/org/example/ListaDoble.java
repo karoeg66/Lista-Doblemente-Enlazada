@@ -27,19 +27,15 @@ public class ListaDoble {
     }
 
     public void insertarAlFinal(int valor) {
-        Nodo puntero = cabeza;
-        Nodo nuevo = new Nodo (valor);
+        Nodo nuevo = new Nodo(valor);
         if (tamanio == 0) {
             cabeza = nuevo;
             ultimo = nuevo;
         }
         else {
-            while(puntero.siguiente != null) {
-                puntero = puntero.siguiente;
-            }
-            puntero.siguiente = nuevo;
-            nuevo.anterior = puntero;
-            ultimo= nuevo;
+            ultimo.siguiente = nuevo;
+            nuevo.anterior = ultimo;
+            ultimo = nuevo;
         }
         tamanio++;
     }
