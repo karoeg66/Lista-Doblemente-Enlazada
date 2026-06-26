@@ -35,6 +35,27 @@ public class ListaDoble {
         tamanio--;
         return valor;
     }
+    public int eliminarPorIndice(int indice){
+        if(indice < 0 || indice >= tamanio){
+            System.out.println("Indice no valido...");
+            return 0;
+        }
+        if(indice == 0){
+            return eliminarInicio();
+        }
+        if(indice == tamanio-1){
+            return eliminarAlFinal();
+        }
+        Nodo puntero = cabeza;
+        for(int i = 0; i < indice; i ++){
+            puntero = puntero.siguiente;
+        }
+        int valor = puntero.valor;
+        puntero.siguiente.anterior = puntero.anterior;
+        puntero.anterior.siguiente = puntero.siguiente;
+        tamanio--;
+        return valor;
+    }
 
     public ListaDoble() {
         this.cabeza = null;
