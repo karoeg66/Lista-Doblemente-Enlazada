@@ -1,0 +1,24 @@
+[33me8318c0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/unificado-karolay[m[33m)[m HEAD@{0}: reset: moving to e8318c01484a0d890b398cd94fb4a02082cf0d6b
+[33m18c9b1e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{1}: checkout: moving from main to feature/unificado-karolay
+[33m18c9b1e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{2}: commit: Se crea el main y realizan correciones
+[33me8318c0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/unificado-karolay[m[33m)[m HEAD@{3}: commit (merge): Merge remote-tracking branch 'refs/remotes/origin/MetodoVaciar'
+[33m0d32035[m HEAD@{4}: commit (merge): Merge remote-tracking branch 'refs/remotes/origin/MetodoImprimir'
+[33mf949a6a[m HEAD@{5}: merge refs/remotes/origin/feature/eliminar-por-indice: Merge made by the 'ort' strategy.
+[33mb29afaa[m HEAD@{6}: commit (merge): Merge remote-tracking branch 'origin/feature/eliminar-final'
+[33m717b030[m[33m ([m[1;31morigin/feature/insertar-indice[m[33m, [m[1;32mfeature/insertar-indice[m[33m)[m HEAD@{7}: reset: moving to 717b030835a97854513f9dda58764254adc43b0c
+[33m3ac670f[m HEAD@{8}: commit (merge): Merge remote-tracking branch 'refs/remotes/origin/feature/eliminar-final'
+[33m717b030[m[33m ([m[1;31morigin/feature/insertar-indice[m[33m, [m[1;32mfeature/insertar-indice[m[33m)[m HEAD@{9}: merge origin/feature/eliminar-final: updating HEAD
+[33m717b030[m[33m ([m[1;31morigin/feature/insertar-indice[m[33m, [m[1;32mfeature/insertar-indice[m[33m)[m HEAD@{10}: merge feature/insertar-indice: Fast-forward
+[33m6a86710[m[33m ([m[1;31morigin/feature/insertar-inicio[m[33m, [m[1;32mfeature/insertar-inicio[m[33m)[m HEAD@{11}: merge feature/insertar-inicio: Fast-forward
+[33m5916755[m HEAD@{12}: checkout: moving from feature/insertar-indice to main
+[33m717b030[m[33m ([m[1;31morigin/feature/insertar-indice[m[33m, [m[1;32mfeature/insertar-indice[m[33m)[m HEAD@{13}: commit: Se crea el metodo insertar por indice
+[33m9a41913[m[33m ([m[1;31morigin/feature/insertar-final[m[33m, [m[1;32mfeature/insertar-final[m[33m)[m HEAD@{14}: checkout: moving from feature/insertar-final to feature/insertar-indice
+[33m9a41913[m[33m ([m[1;31morigin/feature/insertar-final[m[33m, [m[1;32mfeature/insertar-final[m[33m)[m HEAD@{15}: commit: Se corrige el metodo de insertar al final
+[33m08aeaed[m HEAD@{16}: checkout: moving from feature/insertar-indice to feature/insertar-final
+[33m08aeaed[m HEAD@{17}: checkout: moving from feature/insertar-final to feature/insertar-indice
+[33m08aeaed[m HEAD@{18}: commit: Se crea el metodo insertar al final
+[33m6a86710[m[33m ([m[1;31morigin/feature/insertar-inicio[m[33m, [m[1;32mfeature/insertar-inicio[m[33m)[m HEAD@{19}: checkout: moving from feature/insertar-inicio to feature/insertar-final
+[33m6a86710[m[33m ([m[1;31morigin/feature/insertar-inicio[m[33m, [m[1;32mfeature/insertar-inicio[m[33m)[m HEAD@{20}: commit: Se crea el metodo de insertar al inicio
+[33m5916755[m HEAD@{21}: checkout: moving from main to feature/insertar-inicio
+[33m5916755[m HEAD@{22}: Branch: renamed refs/heads/main to refs/heads/main
+[33m5916755[m HEAD@{24}: commit (initial): Se crea la estructura base del proyecto

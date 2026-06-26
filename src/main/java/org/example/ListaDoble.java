@@ -123,13 +123,13 @@ public class ListaDoble {
         }
     }
 
-    public static void metodoImprimir(ListaDoble lista) {
-        if (lista.cabeza == null) {
+    public void metodoImprimir() {
+        if (cabeza == null) {
             System.out.println("La lista está vacía.");
             return;
         }
 
-        Nodo actual = lista.cabeza;
+        Nodo actual = cabeza;
 
         while (actual != null) {
             System.out.print(actual.valor);
@@ -142,8 +142,9 @@ public class ListaDoble {
         }
         System.out.println();
     }
-        public static void metodoVaciar (ListaDoble lista){
-            lista.cabeza = null;
+        public  void metodoVaciar (){
+            cabeza = null;
+            ultimo = null;
             System.out.println("La lista ha sido vaciada.");
         }
     }

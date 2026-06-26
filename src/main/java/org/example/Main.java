@@ -6,21 +6,21 @@ public class Main {
     public static void main(String[] args) {
       ListaDoble lista = new ListaDoble();
       lista.insertarAlInicio(5);
-      lista.metodoImprimir(lista);
-      lista.metodoVaciar(lista);
-      lista.metodoImprimir(lista);
+      lista.metodoImprimir();
+      lista.metodoVaciar();
+      lista.metodoImprimir();
       lista.insertarAlInicio(8);
       lista.insertarAlInicio(7);
       lista.insertarAlFinal(10);
-      lista.metodoImprimir(lista);
+      lista.metodoImprimir();
       lista.insertarPorIndice(1,1);
-      lista.metodoImprimir(lista);
+      lista.metodoImprimir();
       lista.eliminarPorIndice(2);
-      lista.metodoImprimir(lista);
+      lista.metodoImprimir();
       lista.eliminarAlFinal();
-      lista.metodoImprimir(lista);
+      lista.metodoImprimir();
       lista.eliminarInicio();
-      lista.metodoImprimir(lista);
+      lista.metodoImprimir();
 
     }
 }
