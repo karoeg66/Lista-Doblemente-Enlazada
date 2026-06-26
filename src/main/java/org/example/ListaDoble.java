@@ -39,4 +39,34 @@ public class ListaDoble {
         }
         tamanio++;
     }
+
+    public void insertarPorIndice(int valor, int indice) {
+        if (indice < 0 || indice > tamanio) {
+            System.out.println("El indice es invalido");
+            return;
+        }
+        if (indice == 0){
+            insertarAlInicio(valor);
+            return;
+        }
+        if (indice == tamanio) {
+            insertarAlFinal(valor);
+            return;
+        }
+        else {
+            Nodo puntero = cabeza;
+            Nodo nuevo = new Nodo(valor);
+            int contador = 0;
+
+            while (contador < indice){
+                puntero= puntero.siguiente;
+                contador++;
+            }
+            nuevo.anterior= puntero.anterior;
+            nuevo.siguiente=puntero;
+            puntero.anterior.siguiente= nuevo;
+            puntero.anterior= nuevo;
+            tamanio++;
+        }
+    }
 }
