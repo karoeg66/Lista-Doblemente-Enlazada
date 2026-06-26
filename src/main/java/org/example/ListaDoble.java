@@ -39,6 +39,10 @@ public class ListaDoble {
         return contador;
     }
 
+    public boolean isEmpty(){
+        return cabeza == null;
+    }
+
 
     public int eliminarAlFinal () {
         if (ultimo == null) {
