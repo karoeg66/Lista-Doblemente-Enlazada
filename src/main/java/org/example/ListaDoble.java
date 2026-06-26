@@ -28,7 +28,19 @@ public class ListaDoble {
         return valor;
     }
 
-    public int eliminarAlFinal() {
+    public int size () {
+        int contador = 0;
+        Nodo actual = cabeza;
+
+        while (actual != null) {
+            contador++;
+            actual = actual.siguiente;
+        }
+        return contador;
+    }
+
+
+    public int eliminarAlFinal () {
         if (ultimo == null) {
             System.out.println("La lista esta vacia...");
             return 0;
@@ -45,7 +57,7 @@ public class ListaDoble {
         return valor;
     }
 
-    public int eliminarPorIndice(int indice) {
+    public int eliminarPorIndice ( int indice){
         if (indice < 0 || indice >= tamanio) {
             System.out.println("Indice no valido...");
             return 0;
@@ -68,7 +80,7 @@ public class ListaDoble {
     }
 
 
-    public void insertarAlInicio(int valor) {
+    public void insertarAlInicio ( int valor){
         Nodo nuevo = new Nodo(valor);
         if (cabeza == null) {
             cabeza = nuevo;
@@ -81,7 +93,7 @@ public class ListaDoble {
         tamanio++;
     }
 
-    public void insertarAlFinal(int valor) {
+    public void insertarAlFinal ( int valor){
         Nodo nuevo = new Nodo(valor);
         if (tamanio == 0) {
             cabeza = nuevo;
@@ -94,7 +106,7 @@ public class ListaDoble {
         tamanio++;
     }
 
-    public void insertarPorIndice(int valor, int indice) {
+    public void insertarPorIndice ( int valor, int indice){
         if (indice < 0 || indice > tamanio) {
             System.out.println("El indice es invalido");
             return;
@@ -123,7 +135,7 @@ public class ListaDoble {
         }
     }
 
-    public void metodoImprimir() {
+    public void metodoImprimir () {
         if (cabeza == null) {
             System.out.println("La lista está vacía.");
             return;
@@ -142,9 +154,9 @@ public class ListaDoble {
         }
         System.out.println();
     }
-        public  void metodoVaciar (){
-            cabeza = null;
-            ultimo = null;
-            System.out.println("La lista ha sido vaciada.");
-        }
+    public void metodoVaciar () {
+        cabeza = null;
+        ultimo = null;
+        System.out.println("La lista ha sido vaciada.");
     }
+}
