@@ -4,8 +4,16 @@ public class ListaDoble {
     Nodo cabeza;
     int tamanio;
 
-    public static void MetodoVaciar(ListaDoble lista) {
-        lista.cabeza = null;
-        System.out.println("La lista ha sido vaciada.");
+    public int size(){
+        int contador = 0;
+        Nodo actual = cabeza;
+
+        while(actual != null){
+            contador++;
+            actual = actual.siguiente;
+        }
+        return contador;
     }
+
+
     }
