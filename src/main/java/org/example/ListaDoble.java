@@ -140,5 +140,8 @@ public class ListaDoble {
             actual = actual.siguiente;
         }
         System.out.println();
+    public static void MetodoVaciar(ListaDoble lista) {
+        lista.cabeza = null;
+        System.out.println("La lista ha sido vaciada.");
     }
     }
