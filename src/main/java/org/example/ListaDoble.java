@@ -29,14 +29,7 @@ public class ListaDoble {
     }
 
     public int size () {
-        int contador = 0;
-        Nodo actual = cabeza;
-
-        while (actual != null) {
-            contador++;
-            actual = actual.siguiente;
-        }
-        return contador;
+        return tamanio;
     }
 
     public boolean isEmpty(){
@@ -161,6 +154,7 @@ public class ListaDoble {
     public void metodoVaciar () {
         cabeza = null;
         ultimo = null;
+        tamanio = 0;
         System.out.println("La lista ha sido vaciada.");
     }
 }
