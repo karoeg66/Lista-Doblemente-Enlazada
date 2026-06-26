@@ -32,6 +32,5 @@ public class Main {
       int tam = lista.size();
       System.out.println("Tamaño de la lista: " + tam);
 
-
     }
 }
