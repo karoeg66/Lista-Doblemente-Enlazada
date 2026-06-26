@@ -4,6 +4,14 @@ public class ListaDoble {
     Nodo cabeza;
     Nodo ultimo;
     int tamanio;
+
+    public ListaDoble() {
+        this.cabeza = null;
+        this.ultimo = null;
+        this.tamanio = 0;
+    }
+
+
     public int eliminarInicio() {
         if (cabeza == null) {
             System.out.println("La lista esta vacia...");
@@ -19,35 +27,37 @@ public class ListaDoble {
         }
         return valor;
     }
-    public int eliminarAlFinal(){
-        if(ultimo == null){
+
+    public int eliminarAlFinal() {
+        if (ultimo == null) {
             System.out.println("La lista esta vacia...");
             return 0;
         }
         int valor = ultimo.valor;
-        if(cabeza == ultimo){
+        if (cabeza == ultimo) {
             cabeza = null;
             ultimo = null;
-        }else{
+        } else {
             ultimo = ultimo.anterior;
             ultimo.siguiente = null;
         }
         tamanio--;
         return valor;
     }
-    public int eliminarPorIndice(int indice){
-        if(indice < 0 || indice >= tamanio){
+
+    public int eliminarPorIndice(int indice) {
+        if (indice < 0 || indice >= tamanio) {
             System.out.println("Indice no valido...");
             return 0;
         }
-        if(indice == 0){
+        if (indice == 0) {
             return eliminarInicio();
         }
-        if(indice == tamanio-1){
+        if (indice == tamanio - 1) {
             return eliminarAlFinal();
         }
         Nodo puntero = cabeza;
-        for(int i = 0; i < indice; i ++){
+        for (int i = 0; i < indice; i++) {
             puntero = puntero.siguiente;
         }
         int valor = puntero.valor;
@@ -57,20 +67,13 @@ public class ListaDoble {
         return valor;
     }
 
-    public ListaDoble() {
-        this.cabeza = null;
-        this.ultimo = null;
-        this.tamanio = 0;
-    }
-
 
     public void insertarAlInicio(int valor) {
         Nodo nuevo = new Nodo(valor);
-        if (tamanio == 0) {
+        if (cabeza == null) {
             cabeza = nuevo;
             ultimo = nuevo;
-        }
-        else {
+        } else {
             cabeza.anterior = nuevo;
             nuevo.siguiente = cabeza;
             cabeza = nuevo;
@@ -83,8 +86,7 @@ public class ListaDoble {
         if (tamanio == 0) {
             cabeza = nuevo;
             ultimo = nuevo;
-        }
-        else {
+        } else {
             ultimo.siguiente = nuevo;
             nuevo.anterior = ultimo;
             ultimo = nuevo;
@@ -97,32 +99,31 @@ public class ListaDoble {
             System.out.println("El indice es invalido");
             return;
         }
-        if (indice == 0){
+        if (indice == 0) {
             insertarAlInicio(valor);
             return;
         }
         if (indice == tamanio) {
             insertarAlFinal(valor);
             return;
-        }
-        else {
+        } else {
             Nodo puntero = cabeza;
             Nodo nuevo = new Nodo(valor);
             int contador = 0;
 
-            while (contador < indice){
-                puntero= puntero.siguiente;
+            while (contador < indice) {
+                puntero = puntero.siguiente;
                 contador++;
             }
-            nuevo.anterior= puntero.anterior;
-            nuevo.siguiente=puntero;
-            puntero.anterior.siguiente= nuevo;
-            puntero.anterior= nuevo;
+            nuevo.anterior = puntero.anterior;
+            nuevo.siguiente = puntero;
+            puntero.anterior.siguiente = nuevo;
+            puntero.anterior = nuevo;
             tamanio++;
         }
     }
-}
-    public static void MetodoImprimir(ListaDoble lista) {
+
+    public static void metodoImprimir(ListaDoble lista) {
         if (lista.cabeza == null) {
             System.out.println("La lista está vacía.");
             return;
@@ -131,7 +132,7 @@ public class ListaDoble {
         Nodo actual = lista.cabeza;
 
         while (actual != null) {
-            System.out.print(actual.dato);
+            System.out.print(actual.valor);
 
             if (actual.siguiente != null) {
                 System.out.print(" <-> ");
@@ -140,8 +141,9 @@ public class ListaDoble {
             actual = actual.siguiente;
         }
         System.out.println();
-    public static void MetodoVaciar(ListaDoble lista) {
-        lista.cabeza = null;
-        System.out.println("La lista ha sido vaciada.");
     }
+        public static void metodoVaciar (ListaDoble lista){
+            lista.cabeza = null;
+            System.out.println("La lista ha sido vaciada.");
+        }
     }
